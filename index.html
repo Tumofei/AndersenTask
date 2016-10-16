@@ -3,21 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="container">
-    <h4>Ингридиенты</h4>
-        <div class="form-group">
-            <div id="availableProduct" ></div>
-            Название: <input type="text" id="addProduct">
-        <button id="addButton" class="btn">Добавить</button>
+<div class="container">
+
+    <div>
+    <h4>Продукты</h4>
+    <p>Нажмите на продукт, чтобы увидеть доступные рецепты</p>
+    <div id="availableProduct" class="container border"></div>
+    <input type="text" class="form-inline" id="addProduct" value="Название">
+    <button id="addButton" class="btn btn-default">Добавить</button>
 
     </div>
-    <div id="availableRecipe"></div>
 
+    <div>
+    <h4>Доступные рецепты</h4>
+    <p>Нажмите на рецепт, чтобы подсветить нужные продукты</p>
+    <div id="availableRecipe" class="container border"></div>
+    <p id="recipeLog"></p>
     </div>
-<script src="script.js"></script>
+
+
+    <div>
+    <h4>Крафтинг</h4>
+    <p>Перетащите выбранные продукты для крафта</p>
+    <div id="craftItems" class="container border" ></div>
+    <p id="craftLog"></p>
+    <button class="btn btn-default" id="craft">Крафт</button>
+    </div>
+
+</div>
+<script src="scripts/Models.js"></script>
+<script src="scripts/script.js"></script>
+
 </body>
 
 </html>
